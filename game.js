@@ -32,22 +32,23 @@ function answerQuestion(players){
       const winner = players.map(&:intelligence).max;
       break;
     case 3:
-      const winner = players.map {|player| player.intelligence + player.durability};
+      const winner = players.map{|player| player.intelligence + player.durability}.max;
       break;
     case 4:
       const winner = players.map(&:speed).min;
       break;
     case 5:
-      const winner = players.map(&:strength).max
+      const winner = players.map(&:strength).max;
       break;
     case 6:
-      const winner = players.map(&:intelligence).min
+      const winner = players.map(&:intelligence).min;
       break;
   }
   return winner
 }
 
 function displaySuperheros(superheros) {
+  answerQuestion(superheros)
   superheros.forEach(showSuperhero);
 }
 
@@ -72,7 +73,7 @@ function showSuperhero(superhero) {
   const occupationlabel = document.createElement('h5');
   occupationlabel.textContent = "Occupation:";
 
-  if (answer === true){
+  if (winner === self){
     superheroCard.innerHTML = `<a href="http://localhost:3000/response.html?answer=true"/>`
   } else {
     superheroCard.innerHTML = `<a href="http://localhost:3000/response.html?answer=false"/>`

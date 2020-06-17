@@ -1,11 +1,17 @@
 const searchParams = new URLSearchParams(window.location.search)
 const result = searchParams.get('answer')
 
-const answer = document.querySelector('p')
+const answer = document.querySelector('#response')
 
-if (result === "true"){
-    answer.textContent = "RIGHT"
-} else {
-    answer.textContent = "WRONG"
+function displayAnswer(result) {
+    console.log(result)
+    const pin = document.createElement('p')
+    if (result === "true"){
+        pin.textContent = "RIGHT"
+    } else {
+        pin.textContent = "WRONG"
+    }
+    answer.appendChild(pin)
 }
 
+displayAnswer(result);

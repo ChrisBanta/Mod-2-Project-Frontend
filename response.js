@@ -1,11 +1,9 @@
 const searchParams = new URLSearchParams(window.location.search)
 // const result = searchParams.get('answer')
 
-const answer = document.querySelector('p')
+const answer = document.querySelector('#response')
 
-let result  = "false";
 
-console.log(result)
 
 if (result === "true"){
     const rightAnswer = document.createElement('h6');
@@ -16,5 +14,3 @@ if (result === "true"){
     wrongAnswer.textContent = "WRONG!";
     document.body.prepend(wrongAnswer)
     
-}
-

@@ -3,7 +3,6 @@ h1 {
     text-align: center;
     margin-top: 7rem;
     font-size: 70px;
-    /* animation-name: example; */
     animation: example 5s;
     margin-top: 2rem;
     text-shadow: 2px 2px white;
@@ -111,4 +110,25 @@ section {
 
   #extraLarge {
       font-size: 500px;
+  }
+
+  h6{
+    font-family: 'Londrina Solid', cursive;
+    text-align: center;
+    margin-top: 7rem;
+    font-size: 500px;
+    /* animation-name: example; */
+    animation: extraLarge 6s;
+    margin-top: 0rem;
+    text-shadow: 2px 2px white;
+    margin-bottom: 0rem;
+
+  }
+
+  @keyframes extraLarge {
+    0%   {color:black;font-size: 550px;}
+    25%  {color: red;font-size: 500px;}
+    50%  {color:black;font-size: 550px;}
+    75%  {color: red;font-size: 500px;}
+    100% {color:black;font-size: 550px;}
   }

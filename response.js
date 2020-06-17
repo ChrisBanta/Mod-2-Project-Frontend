@@ -1,11 +1,20 @@
 const searchParams = new URLSearchParams(window.location.search)
-const result = searchParams.get('answer')
+// const result = searchParams.get('answer')
 
 const answer = document.querySelector('p')
 
+let result  = "false";
+
+console.log(result)
+
 if (result === "true"){
-    answer.textContent = "RIGHT"
+    const rightAnswer = document.createElement('h6');
+    rightAnswer.textContent = "RIGHT!";
+    document.body.prepend(rightAnswer)
 } else {
-    answer.textContent = "WRONG"
+    const wrongAnswer = document.createElement('h6');
+    wrongAnswer.textContent = "WRONG!";
+    document.body.prepend(wrongAnswer)
+    
 }
 

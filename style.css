@@ -5,6 +5,9 @@ h1 {
     font-size: 70px;
     /* animation-name: example; */
     animation: example 5s;
+    margin-top: 2rem;
+    text-shadow: 2px 2px white;
+    margin-bottom: 1rem;
     
   
 }
@@ -13,11 +16,21 @@ h2 {
     font-family: 'Londrina Solid', cursive;
     font-size: 32px;
     text-align: center;
+    margin-top: 10px;
+    text-shadow: 1px 1px white;
+}
+
+h5 {
+    font-family: 'Londrina Solid', cursive;
+    font-size: 20px;
+    font-style: italic;
+    text-shadow: .5px .5px white;
 }
 
 p{
     font-family: 'Londrina Solid', cursive;
     font-size: 20px;
+    text-shadow: .5px .5px white;
 }
 
 @keyframes example {
@@ -30,6 +43,9 @@ p{
 
 body{
     background-color: yellow;
+    /* background-image: url("images/spiderman500.png");
+    background-repeat: no-repeat;
+    background-position: top; */
 }
 
 section {
@@ -46,18 +62,47 @@ section {
     background-color:red;
     max-width: 350px;
     width: 350px;
+    height: 550px;
+    line-height: 100%;
     
     
    
   }
 
   img {
-      width: 250px;
+      width: 200px;
       /* text-align: center; */
       display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2rem;
+      }
+
+  div.smackdown{
+      display: flex;
+      font-size: 48px;
+      font-family: 'Londrina Solid', cursive;
+      margin-top: 12rem;
       
+      padding: 32px;
+      display: flex;
+      align-content: center;
+      box-shadow: 0 3px 3px black;
+      border-radius: 2px;
+      text-decoration: none;
+      color: black;
       
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    
+  }
+
+  div > a {
+      text-decoration: none;
+      color: black;
+      text-align: center;
   }

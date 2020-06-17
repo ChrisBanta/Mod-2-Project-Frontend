@@ -28,7 +28,18 @@ function showSuperhero(superhero) {
   const occupation = document.createElement("p");
   occupation.textContent = superhero.occupation;
 
-  superheroCard.append(image, name, fullname, occupation);
+  const namelabel = document.createElement('h5');
+  namelabel.textContent = "Real Name:";
+
+  const occupationlabel = document.createElement('h5');
+  occupationlabel.textContent = "Occupation:";
+
+
+
+//   var namelabel = document.createTextNode('Name:')
+//   var occupationlabel = document.createTextNode('Occupation:')
+
+  superheroCard.append(image, name, namelabel, fullname, occupationlabel, occupation);
   superheroSection.append(superheroCard);
 }
 

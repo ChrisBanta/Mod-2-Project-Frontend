@@ -26,22 +26,22 @@ function displayQuestion(question){
 function answerQuestion(players){
   switch (questionNumber) {
     case 1: 
-      const winner = players.map(&:speed).max;
+      const winner = players.map(x => x.speed).max;
       break;
     case 2: 
-      const winner = players.map(&:intelligence).max;
+      const winner = players.map(x => x.intelligence).max;
       break;
     case 3:
-      const winner = players.map{|player| player.intelligence + player.durability}.max;
+      const winner = players.map(x => x.intelligence + x.durability).max;
       break;
     case 4:
-      const winner = players.map(&:speed).min;
+      const winner = players.map(x => x.speed).min;
       break;
     case 5:
-      const winner = players.map(&:strength).max;
+      const winner = players.map(x => x.strength).max;
       break;
     case 6:
-      const winner = players.map(&:intelligence).min;
+      const winner = players.map(x => x.intelligence).min;
       break;
   }
   return winner

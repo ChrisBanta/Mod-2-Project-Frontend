@@ -2,7 +2,8 @@ const baseURL = "http://localhost:3000";
 const superherosURL = `${baseURL}/superheros`;
 const questionsURL = `${baseURL}/questions`;
 let questionNumber;
-let winner=0;
+let winner;
+let middle;
 
 
 fetch(questionsURL)
@@ -28,28 +29,36 @@ function displayQuestion(question){
 };
 
 function answerQuestion(players){
-  console.log(players)
-  console.log(winner)
-  console.log(questionNumber)
-  console.log(`${questionNumber}`)
-  switch (`${questionNumber}`) {
-    case 1 : 
-      winner = players.map(x => x.speed).max;
+  switch (questionNumber) {
+    case 1: 
+      middle = players.map(x => x.speed);
+      middle = Math.max(...middle);
+      winner = players.find(x => x.speed === middle);
       break;
-    case 2 : 
-      winner = players.map(x => x.intelligence).max;
+    case 2: 
+      middle = players.map(x => x.intelligence);
+      middle = Math.max(...middle);
+      winner = players.find(x => x.intelligence === middle);
       break;
-    case 3 :
-      winner = players.map(x => x.intelligence + x.durability).max;
+    case 3:
+      middle = players.map(x => x.intelligence + x.durability);
+      middle = Math.max(...middle);
+      winner = players.find(x => (x.intelligence + x.durability) === middle);
       break;
-    case 4 :
-      winner = players.map(x => x.speed).min;
+    case 4:
+      middle = players.map(x => x.speed);
+      middle = Math.min(...middle);
+      winner = players.find(x => x.speed === middle)
       break;
-    case 5 :
-      winner = players.map(x => x.strength).max;
+    case 5:
+      middle = players.map(x => x.strength);
+      middle = Math.max(...middle);
+      winner = players.find(x => x.strength === middle)
       break;
-    case 6 :
-      winner = players.map(x => x.intelligence).min;
+    case 6:
+      middle = players.map(x => x.intelligence);
+      middle = Math.min(...middle);
+      winner = players.find(x => x.intelligence === middle)
       break;
   } console.log(winner)
 }
@@ -61,8 +70,6 @@ function showSuperhero(superhero) {
   const image = document.createElement("img");
   image.src = superhero.picture; 
   
-  const name = document.createElement("h2");
-  // name.textContent = superhero.name; 
   
   const fullname = document.createElement("p");
   fullname.textContent = superhero.fullname;
@@ -75,10 +82,10 @@ function showSuperhero(superhero) {
   
   const occupationlabel = document.createElement('h5');
   occupationlabel.textContent = "Occupation:";
-
-  console.log(superheroCard)
-  console.log(superhero)
+  
   console.log(winner)
+
+  const name = document.createElement("h2");
   
   if (winner === superhero) {
     name.innerHTML = `<a href="http://localhost:3001/response.html?answer=true">${superhero.name}</a>`

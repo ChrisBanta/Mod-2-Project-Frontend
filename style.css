@@ -7,9 +7,7 @@ h1 {
     margin-top: 2rem;
     text-shadow: 2px 2px white;
     margin-bottom: 1rem;
-    
-  
-}
+    }
 
 h2 {
     font-family: 'Londrina Solid', cursive;
@@ -26,7 +24,19 @@ h5 {
     text-shadow: .3px .3px white;
 }
 
-p{
+h6 {
+    font-family: 'Londrina Solid', cursive;
+    text-align: center;
+    margin-top: 7rem;
+    font-size: 400px;
+    /* animation-name: example; */
+    animation: extraLarge 6s;
+    margin-top: 0rem;
+    text-shadow: 2px 2px white;
+    margin-bottom: 0rem;
+}
+
+p { 
     font-family: 'Londrina Solid', cursive;
     font-size: 20px;
     text-shadow: .3px .3px white;
@@ -38,6 +48,22 @@ p{
     50%  {color:black;font-size: 70px;}
     75%  {color: red;font-size: 65px;}
     100% {color:black;font-size: 70px;}
+  }
+
+  @keyframes extraLarge {
+    0%   {color:black;font-size: 450px;}
+    25%  {color: red;font-size: 400px;}
+    50%  {color:black;font-size: 450px;}
+    75%  {color: red;font-size: 400px;}
+    100% {color:black;font-size: 450px;}
+  }
+
+  @keyframes gameover {
+    0%   {color:black;font-size: 100px;}
+    25%  {color: red;font-size: 105px;}
+    50%  {color:black;font-size: 100px;}
+    75%  {color: red;font-size: 105px;}
+    100% {color:black;font-size: 100px;}
   }
 
 body{
@@ -112,26 +138,9 @@ section {
       font-size: 500px;
   }
 
-  h6{
-    font-family: 'Londrina Solid', cursive;
-    text-align: center;
-    margin-top: 7rem;
-    font-size: 500px;
-    /* animation-name: example; */
-    animation: extraLarge 6s;
-    margin-top: 0rem;
-    text-shadow: 2px 2px white;
-    margin-bottom: 0rem;
+  
 
-  }
-
-  @keyframes extraLarge {
-    0%   {color:black;font-size: 550px;}
-    25%  {color: red;font-size: 500px;}
-    50%  {color:black;font-size: 550px;}
-    75%  {color: red;font-size: 500px;}
-    100% {color:black;font-size: 550px;}
-  }
+  
 
   #top-right {
       position: fixed;
@@ -168,12 +177,24 @@ section {
 }
 
 #button {
-    width: 250px;
-    height: 200px;
+    
 
 }
 
 #mainhead {
     font-size: 100px;
     margin-top: 12rem;
+    animation: gameover 5s;
+}
+
+#gameOverTitle {
+    display: block;
+    font-size: 100px;
+    animation: gameover 5s;
+
+}
+
+#gameOverButton {
+    width: 250px;
+    height: 200px;
 }

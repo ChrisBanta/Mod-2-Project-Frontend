@@ -1,15 +1,15 @@
 const searchParams = new URLSearchParams(window.location.search)
 // const result = searchParams.get('answer')
 
-const answer = document.querySelector('p')
+const answer = document.querySelector('#response')
 
-let result  = "false";
-
-console.log(result)
+let count = 0;
+let score = 0;
 
 if (result === "true"){
     const rightAnswer = document.createElement('h6');
     rightAnswer.textContent = "RIGHT!";
+
 
     const niceWork = document.createElement('h1');
     niceWork.textContent = "Nice Work, Human";
@@ -24,5 +24,18 @@ if (result === "true"){
 
     document.body.append(wrongAnswer, studyUp)
     
+
+   
+
 }
 
+const scoreDisplay = document.querySelector("#score-display")
+    
+function increaseCount(increase){
+    count += increase
+    if (count === 5) {
+        const display = document.createElement('p')
+        display.textContent = `${score}/${count}`
+        scoreDisplay.appendChild(display)
+    }
+}

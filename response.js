@@ -14,3 +14,9 @@ if (result === "true"){
     wrongAnswer.textContent = "WRONG!";
     document.body.prepend(wrongAnswer)
     
+function increaseCount(count){
+    count +=1
+    if (count === 5) {
+        
+    }
+}

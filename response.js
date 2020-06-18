@@ -10,11 +10,19 @@ console.log(result)
 if (result === "true"){
     const rightAnswer = document.createElement('h6');
     rightAnswer.textContent = "RIGHT!";
-    document.body.prepend(rightAnswer)
+
+    const niceWork = document.createElement('h1');
+    niceWork.textContent = "Nice Work, Human";
+
+    document.body.append(rightAnswer, niceWork)
 } else {
     const wrongAnswer = document.createElement('h6');
     wrongAnswer.textContent = "WRONG!";
-    document.body.prepend(wrongAnswer)
+
+    const studyUp = document.createElement('h1');
+    studyUp.textContent = "Study Up, Human";
+
+    document.body.append(wrongAnswer, studyUp)
     
 }
 

@@ -60,7 +60,7 @@ function answerQuestion(players){
       middle = Math.min(...middle);
       winner = players.find(x => x.intelligence === middle)
       break;
-  } console.log(winner)
+  } 
 }
 
 
@@ -83,7 +83,6 @@ function showSuperhero(superhero) {
   const occupationlabel = document.createElement('h5');
   occupationlabel.textContent = "Occupation:";
   
-  console.log(winner)
 
   const name = document.createElement("h2");
   

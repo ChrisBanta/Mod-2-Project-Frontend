@@ -132,3 +132,48 @@ section {
     75%  {color: red;font-size: 500px;}
     100% {color:black;font-size: 550px;}
   }
+
+  #top-right {
+      position: fixed;
+      top: 0;
+      right: 30px;
+      width: 200px;
+    height: auto;
+  }
+
+  #top-left {
+    position: fixed;
+    top: 0;
+    left: 30px;
+    width: 200px;
+    height: auto;
+    transform: rotate(-15deg);
+}
+
+#bottom-right {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 200px;
+    height: auto;
+}
+
+#bottom-left {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 200px;
+    height: auto;
+    transform: rotate(15deg);
+}
+
+#button {
+    width: 250px;
+    height: 200px;
+
+}
+
+#mainhead {
+    font-size: 100px;
+    margin-top: 12rem;
+}

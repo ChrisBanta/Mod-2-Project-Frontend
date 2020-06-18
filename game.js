@@ -60,6 +60,21 @@ function answerQuestion(players){
       middle = Math.min(...middle);
       winner = players.find(x => x.intelligence === middle)
       break;
+    case 7:
+      middle = players.map(x => x.combat + x.strength + x.power);
+      middle = Math.max(...middle);
+      winner = players.find(x => (x.combat + x.power + x.strength) === middle);
+      break;
+    case 8:
+      middle = players.map(x => x.durability + x.combat + x.strength + x.power + x.intelligence + x.speed);
+      middle = Math.max(...middle);
+      winner = plaers.find(x => (x.power + x.strength + x.combat + x.intelligence + x.speed + x.durability) === middle);
+      break;
+    case 9:
+      middle = players.map(x => x.strength);
+      middle = Math.max(...middle);
+      winner = players.find(x => x.strength === middle)
+      break;
   } 
 }
 
